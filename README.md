@@ -9,14 +9,14 @@ To investigate this question we I will use an X-wines dataset consisting of the 
 
 ## 2. Data Wrangling
 This was a fairly clean dataset so most of my data wrangling time was spent examining the column values. Here are a few of the steps that I took:
--Dropped the website column from the wine list dataframe as I know that won’t be useful for my analysis.
--Examined the value counts of most of the attribute columns in the wine list dataframe to view the available responses for each variable.
--Checked the wine list dataframe for null values and found none.
--Made sure no specific wine ID was repeated in the wine list dataframe. 
--Found out the value range for the ratings in the wine ratings dataframe is1-5.
--Counted the number of unique raters in the wine ratings dataframe.
--Examined the frequency of the different individual raters.
--Created a mean rating column for the wine ratings dataframe that represented the mean of the ratings given for each unique wine.
+- Dropped the website column from the wine list dataframe as I know that won’t be useful for my analysis.
+- Examined the value counts of most of the attribute columns in the wine list dataframe to view the available responses for each variable.
+- Checked the wine list dataframe for null values and found none.
+- Made sure no specific wine ID was repeated in the wine list dataframe. 
+- Found out the value range for the ratings in the wine ratings dataframe is1-5.
+- Counted the number of unique raters in the wine ratings dataframe.
+- Examined the frequency of the different individual raters.
+- Created a mean rating column for the wine ratings dataframe that represented the mean of the ratings given for each unique wine.
 
 ## 3. EDA
 
