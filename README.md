@@ -94,7 +94,10 @@ After exploring this data further here are my key takeaways:
 3. Most of our data is categorical in some way and need a dummy variable to be created for predictive purposes.
 4. We have a mixture of wine data and user rating data that will serve as a good base for creating an accurate recommender system.
 
-## 4. Modelings
+## 4. Modeling
+
+[Full Data Cleaning Report](https://github.com/jwatki8/Capstone-3/blob/main/Capstone%203-%20Modeling%20Draft-Slim.ipynb)
+
 Since our recommender system will be based on user ratings of wine, I started by parsing out the user id, wine id and rating. From there I created the surprise data set to cross-validate our models on as well as create an anti-set to run predictions on later. The models I tested on the data were as follows:
 
 - Normal Predictor model
