@@ -45,3 +45,7 @@ I also took a look at the rating distribution for some of the wine attribute var
 
 photo
 
+‘High’ acidity wines seemed to have a large representation in all of the rating values but it also accounted for 80% of the wine distribution. A similar pattern emerged with the distribution of the ‘Body’ variable. ‘Full bodied’ wines had the largest representation on the high ratings but this category accounted for almost 50% of the wine distribution.
+-Since looking at this information over our entire dataset wasn’t quite as useful as I would like it to be, I tried to examining the wines with the highest average rating. I started with a subset of rating means above 4.8. Within this subset the distribution for the ‘Acidity’ attribute remained the same. However, the distribution for the ‘Body’ variable did change. 
+
+
