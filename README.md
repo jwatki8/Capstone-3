@@ -84,3 +84,12 @@ We don’t have any strong correlations here but we have some moderate ones. We 
 Lastly I examined some of the correlations within the dummy variables I created.
 
 ![Screenshot of correlation map.](/Read%20me%20files/dummy%20variable%20correlations.png)
+
+As would be expected we have a few variables that have high negative correlations because they are in the same category. For example, low, medium and high acidity are all negatively correlated because they are all different levels of the same scale.
+
+### EDA Findings
+After exploring this data further here are my key takeaways:
+1. It is hard to pinpoint specific features of the wines that correlate to higher or lower ratings because of the distribution of the wines with different features. Most of the wine attributes have a disproportionate representation of some values over others. For example, our wine list contains 56,162 red wines with the closest second being 29,196 red wines. All categories after that are 8000 or less. This makes it hard to discover patterns for large representation in high ratings outside of just being a large portion of the dataset overall.
+2. There are a good amount of negative correlation between the variables because the different variables are what make each wine distinct.
+3. Most of our data is categorical in some way and need a dummy variable to be created for predictive purposes.
+4. We have a mixture of wine data and user rating data that will serve as a good base for creating an accurate recommender system.
