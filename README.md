@@ -32,3 +32,16 @@ Since the dataset existed in two different dataframes(wine_list and wine_ratings
 
 ### Distributions
 
+First I examined the distribution of the ratings. 
+
+photo
+
+From this plot I noticed a few things
+- 4.0 is the most frequent rating with 40% of the distribution.
+- Most of the ratings for the wines are above 3.0.
+- the users can give .5 ratings as a part of the value ranges (ex. 1.5, 2.5)
+- there is a significant count for all of the possible ratings.
+I also took a look at the rating distribution for some of the wine attribute variables starting with the ‘Acidity’ variable. 
+
+photo
+
