@@ -106,3 +106,29 @@ I started with a Normal Predictor model to examine a baseline RMSE for our datas
 From the results outputted from testing different models on the data, I moved forward with fine tuning and applying both the KNNBaseline model as well as the SVD model. Even though the KNNBaseline model technically has the best mean RMSE, The SVD model has an RMSE that is very close and also would save a lot of test and fit time. I think it would be worth comparing the predictions for both models to find out if we can save time in the long run.
 First let’s run a grid search for the best hyperparameters for our KNNBaseline Model.
 
+### Hyperparameters 
+First I ran a grid search for the best hyperparameters for our KNNBaseline Model. The best parameters for this model are as follows:
+{'n_epochs': 5, 'lr_all': 0.002, 'reg_all': 0.4}
+
+Next I ran the parameter grid search for the SVD model as well.The best parameters for the SVD model are as follows:
+{'n_epochs': 15, 'lr_all': 0.005, 'reg_all': 0.4}
+
+### Results
+To apply the model and get predictions, I created a dataframe that will display the userID, wineID, the actual rating and the predicted rating from our model. I also included an error column that displays the difference between the actual rating and the predicted rating.
+
+![Screenshot of KNN Predictions.](/Read%20me%20files/predictions%20df.PNG)
+
+I stared with examining how many estimated ratings have a low error. The KNN Baseline Model produced 7278 estimated ratings out of 150,000 with errors less than 0.1. Next I examined the distribution of the ratings in the low error subset.
+
+![Screenshot of KNN distribution.](/Read%20me%20files/Knn%20dist.png)
+
+This model is best at predicting ratings of 4.0. It is also worth noting that this rating distribution is similar to the total data set. I followed the same steps using the SVD model as well.
+
+![Screenshot of SVD ditribution.](/Read%20me%20files/svd%20low.PNG)
+
+The number of predictions in this data subset is 7070. This is similar to but less than the number of low error predictions from the KNN baseline model. The rating distribution for this model is also very similar to the KNNBaseline model with the top represented rating being 4.0. Finally compared the RMSE for the different models on our traintest set.
+
+![Screenshot of KNN RMSE.](/Read%20me%20files/knn%20rmse.png)
+![Screenshot of KNN RMSE.](/Read%20me%20files/svd%20rmse.png)
+
+The RMSE for the KNN baseline model is pretty much the same as our initial cross validation mean. The SVD model is a bit higher than our initial cross validation mean.
