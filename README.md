@@ -1,5 +1,5 @@
 # Capstone 3_Final_Report- Jessica Williams
-# REACHING OUT TO OLD FRIENDS: A study of X-Wines and X-Wine customers
+# Reaching Out To Old Friends: A study of X-Wines and X-Wine customers
 X-wines has been running into trouble retaining their customer base. The percentage rate for repeat customers is at the lowest it’s been in the last five years. The company is trying to generate ideas to keep current customers making more purchases. X wines would like to enhance their customer experiences by recommending wines to customers that they might be interested in. They are looking to build a recommender system based on the properties of their wine and the customer ratings.
 
 ## 1. Data
