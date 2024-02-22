@@ -102,7 +102,7 @@ Since our recommender system will be based on user ratings of wine, I started by
 - KNNWithMeans
 - KNNBaseline
 
-I started with a Normal Predictor model to examine a baseline RMSE for our dataset. As expected our mean RMSE (0.906) is fairly high for a rating scale of 1-5. The SVD model gives us a much better mean RMSE of 0.488. - The KNNWithMeans model has a higher mean RMSE than the previous model. The test time is also much longer than the both of the previous models. The KNNBaseline model seems to have the best mean RMSE at 0.486. It also has the longest mean fit and test time of all of the models. 
+I started with a Normal Predictor model to examine a baseline RMSE for our dataset. As expected our mean RMSE (0.906) is fairly high for a rating scale of 1-5. The SVD model gives us a much better mean RMSE of 0.488. The KNNWithMeans model has a higher mean RMSE than the previous model. The test time is also much longer than the both of the previous models. The KNNBaseline model seems to have the best mean RMSE at 0.486. It also has the longest mean fit and test time of all of the models. 
 From the results outputted from testing different models on the data, I moved forward with fine tuning and applying both the KNNBaseline model as well as the SVD model. Even though the KNNBaseline model technically has the best mean RMSE, The SVD model has an RMSE that is very close and also would save a lot of test and fit time. I think it would be worth comparing the predictions for both models to find out if we can save time in the long run.
 First let’s run a grid search for the best hyperparameters for our KNNBaseline Model.
 
