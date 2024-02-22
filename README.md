@@ -135,3 +135,6 @@ The number of predictions in this data subset is 7070. This is similar to but le
 ![Screenshot of KNN RMSE.](/Read%20me%20files/svd%20rmse.png)
 
 The RMSE for the KNN baseline model is pretty much the same as our initial cross validation mean. The SVD model is a bit higher than our initial cross validation mean.
+
+## 4. Conclusions
+After using each model to create predictions it looks like the KNNBaseline model produces better results than the SVD model. The KNN Baseline model has a better RMSE and has more estimated ratings with low errors than the SVD model. It seems that the KNNBaseline would be the better model to use to increase the chance of predicting ratings more accurately. Considering that the difference in outcomes between the two models is small and the time difference for applying the models is fairly large, it may be worth it to our stake holders to use the SVD model. A choice would have to be made here on whether accuracy or resource usage is the most important factor.
