@@ -48,16 +48,39 @@ From this plot I noticed a few things
 - there is a significant count for all of the possible ratings.
 I also took a look at the rating distribution for some of the wine attribute variables starting with the ‘Acidity’ variable. 
 
-![Screenshot of correlation map.](/Read%20me%20files/Acidity%20dist.png)
+![Screenshot of Acidity distribution.](/Read%20me%20files/Acidity%20dist.png)
 
-![Screenshot of correlation map.](/Read%20me%20files/acidity%20dist%202.png)
+![Screenshot of Acidity Distribution 2.](/Read%20me%20files/acidity%20dist%202.png)
 
 ‘High’ acidity wines seemed to have a large representation in all of the rating values but it also accounted for 80% of the wine distribution. A similar pattern emerged with the distribution of the ‘Body’ variable. ‘Full bodied’ wines had the largest representation on the high ratings but this category accounted for almost 50% of the wine distribution.
 
 Since looking at this information over our entire dataset wasn’t quite as useful as I would like it to be, I tried to examining the wines with the highest average rating. I started with a subset of rating means above 4.8. Within this subset the distribution for the ‘Acidity’ attribute remained the same. However, the distribution for the ‘Body’ variable did change. 
 
-![Screenshot of correlation map.](/Read%20me%20files/Body%20dist.png)
+![Screenshot of Body distribution.](/Read%20me%20files/Body%20dist.png)
 
-![Screenshot of correlation map.](/Read%20me%20files/Body%20ratings%20dist.png)
+![Screenshot of Body distribution 2.](/Read%20me%20files/Body%20ratings%20dist.png)
 
+The ‘very full-bodied’ wines now represents the largest percentage of rating values of 5.0 despite ranking third in the percentage of wines in this data subset. I also made this comparison with the ‘Elaborate’ variable.
 
+![Screenshot of Elaborate Counts.](/Read%20me%20files/Elaborate%20variable%20counts.PNG)
+
+For values in the ‘Elaborate’ variable, the top represented categories are ‘Assemblage/Blend’ and ‘Varietal/100%’. Although these two categories have the highest representation in the dataset, the highest ratings subset of the data contains the largest percentage of the Assemblage/Blend where the overall data set contains the highest portion of Varietal/100%.
+
+I decided to stick to examining the highest rated subset of the data and move onto the representation of specific wineries in this subset. ‘Vega Sicilia’ sits at the top of the list with 8670 out of 33808 entries. I decided to narrow or top subset further to see if the top represented wineries would change. When examining rating means above 4.9, it looks like our top 5 wineries are now completely different than they were for rating means above 4.8. Krug sits at the top of the list with 157 entries out of 663.
+
+Next I took a look at how the rating frequency of a user affects the data. I examined a subset of data with only users who rated a wine more than 2000 times. 
+
+I noticed a few key things from this comparison:
+- The most frequently included wineries have changed again. ‘M. Chapoutier’ is most represented.
+- It looks like the frequent raters rate a little more critically as the 50% and 75% quartiles are lower than the total dataset. 
+- Both the ‘Type’ and ‘Elaborate’ variable still have the same category with the highest representation (‘Red’, ‘Varietal/100%’)
+
+### Correlations
+First I looked for correlations between the wine attributes.
+![Screenshot of correlation map.](/Read%20me%20files/wine%20attribute%20correlations.png)
+
+We don’t have any strong correlations here but we have some moderate ones. We can see the highest correlation is between ‘Body’ and ‘Type’ at 0.53. There are also a lot of negative correlations here which could mean that some of the attributes indicate the absence of others. For instance, a wine with more ‘ABV’ may have lower ‘Acidity’. I also examined correlations between the wine attributes and the rating mean of the wines and found no significant correlations. 
+
+Lastly I examined some of the correlations within the dummy variables I created.
+
+![Screenshot of correlation map.](/Read%20me%20files/dummy%20variable%20correlations.png)
