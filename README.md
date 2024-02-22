@@ -8,6 +8,9 @@ To investigate this question we I will use an X-wines dataset consisting of the 
 •	XWines_Full_21M_ratings(csv file)- This file contains a set of 21 million user ratings of wines on a scale of 1-5.
 
 ## 2. Data Wrangling
+
+[Full Data Cleaning Report](https://github.com/jwatki8/Capstone-3/blob/main/Capstone%203%20Data%20Wrangling.ipynb)
+
 This was a fairly clean dataset so most of my data wrangling time was spent examining the column values. Here are a few of the steps that I took:
 - Dropped the website column from the wine list dataframe as I know that won’t be useful for my analysis.
 - Examined the value counts of most of the attribute columns in the wine list dataframe to view the available responses for each variable.
@@ -19,6 +22,8 @@ This was a fairly clean dataset so most of my data wrangling time was spent exam
 - Created a mean rating column for the wine ratings dataframe that represented the mean of the ratings given for each unique wine.
 
 ## 3. EDA
+
+[Full EDA Report](https://github.com/jwatki8/Capstone-3/blob/main/Capstone%203-Exploratory%20Data%20Analysis%20(EDA)%20Draft.ipynb)
 
 ### Creating more features
 To aid in more effective analysis, I added a few extra variable columns to the data. In order to take a look at how many times our raters rated different wines, I added a column called rater count. This column summed the number of rating rows for each unique rater. The rater count column displayed a range of 5 to 2986 and confirmed that multiple ratings were available for all of our users.
@@ -34,7 +39,7 @@ Since the dataset existed in two different dataframes(wine_list and wine_ratings
 
 First I examined the distribution of the ratings. 
 
-photo
+![Screenshot of Rating Distribution.](/Read%20me%20files/rating%20percent%20dist.png)
 
 From this plot I noticed a few things
 - 4.0 is the most frequent rating with 40% of the distribution.
@@ -43,7 +48,9 @@ From this plot I noticed a few things
 - there is a significant count for all of the possible ratings.
 I also took a look at the rating distribution for some of the wine attribute variables starting with the ‘Acidity’ variable. 
 
-photo
+![Screenshot of correlation map.](/Read%20me%20files/Acidity%20dist.png)
+
+![Screenshot of correlation map.](/Read%20me%20files/acidity%20dist%202.png)
 
 ‘High’ acidity wines seemed to have a large representation in all of the rating values but it also accounted for 80% of the wine distribution. A similar pattern emerged with the distribution of the ‘Body’ variable. ‘Full bodied’ wines had the largest representation on the high ratings but this category accounted for almost 50% of the wine distribution.
 -Since looking at this information over our entire dataset wasn’t quite as useful as I would like it to be, I tried to examining the wines with the highest average rating. I started with a subset of rating means above 4.8. Within this subset the distribution for the ‘Acidity’ attribute remained the same. However, the distribution for the ‘Body’ variable did change. 
